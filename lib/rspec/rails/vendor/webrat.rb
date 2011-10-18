@@ -6,6 +6,7 @@ end
 RSpec.configure do |c|
   if defined?(Webrat)
     c.include Webrat::Matchers, :type => :request
+    c.include Webrat::Matchers, :type => :controller
     c.include Webrat::Methods,  :type => :request
 
     module RequestInstanceMethods
